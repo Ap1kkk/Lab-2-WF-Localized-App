@@ -9,21 +9,45 @@ namespace Lab_2_WF_Localized_App
     internal class Clock
     {
         public event Action SecondTick;
+        public string DefaultValue { get; private set; } = "00 : 00 : 00";
 
         private System.Windows.Forms.Timer _timer = new System.Windows.Forms.Timer();
         private DateTime _dateTime = DateTime.Now;
 
         private Dictionary<string, TimeSpan> _citiesTimeShift = new Dictionary<string, TimeSpan>();
 
+
         public Clock(int interval)
         {
             _timer.Interval = interval;
-            _timer.Start();
             _timer.Tick += HandleTimerTick;
         }
         ~Clock()
         {
             _timer.Tick -= HandleTimerTick;
+        }
+
+        public void Start()
+        {
+            _timer.Start();
+        }
+
+        public void Stop()
+        {
+            _timer.Stop();
+        }
+
+        public string GetCityTime(string city)
+        {
+            string formatedTime = DefaultValue;
+            if (!_citiesTimeShift.ContainsKey(city))
+            {
+                return formatedTime;
+            }
+
+            DateTime shiftedTime = _dateTime + _citiesTimeShift[city];
+
+            return shiftedTime.ToString("HH : mm : ss");
         }
 
         public void AddCity(string city, TimeSpan timeShift)
@@ -44,17 +68,5 @@ namespace Lab_2_WF_Localized_App
             SecondTick?.Invoke();
         }
 
-        public string GetCityTime(string city)
-        {
-            string formatedTime = "00 : 00 : 00";
-            if (!_citiesTimeShift.ContainsKey(city))
-            {
-                return formatedTime;
-            }
-
-            DateTime shiftedTime = _dateTime + _citiesTimeShift[city];
-
-            return shiftedTime.ToString("HH : mm : ss");
-        }
     }
 }

@@ -35,6 +35,9 @@
             this.LondonTimeBox = new System.Windows.Forms.TextBox();
             this.MoscowTimeBox = new System.Windows.Forms.TextBox();
             this.VladivostokTimeBox = new System.Windows.Forms.TextBox();
+            this.StartClockLabel = new System.Windows.Forms.Label();
+            this.StopClockLabel = new System.Windows.Forms.Label();
+            this.LocaleButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // VladivostokLabel
@@ -67,16 +70,37 @@
             resources.ApplyResources(this.VladivostokTimeBox, "VladivostokTimeBox");
             this.VladivostokTimeBox.Name = "VladivostokTimeBox";
             // 
+            // StartClockLabel
+            // 
+            resources.ApplyResources(this.StartClockLabel, "StartClockLabel");
+            this.StartClockLabel.Name = "StartClockLabel";
+            // 
+            // StopClockLabel
+            // 
+            resources.ApplyResources(this.StopClockLabel, "StopClockLabel");
+            this.StopClockLabel.Name = "StopClockLabel";
+            // 
+            // LocaleButton
+            // 
+            resources.ApplyResources(this.LocaleButton, "LocaleButton");
+            this.LocaleButton.Name = "LocaleButton";
+            this.LocaleButton.UseVisualStyleBackColor = true;
+            this.LocaleButton.Click += new System.EventHandler(this.SwitchLocale);
+            // 
             // MainForm
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.LocaleButton);
+            this.Controls.Add(this.StopClockLabel);
+            this.Controls.Add(this.StartClockLabel);
             this.Controls.Add(this.VladivostokTimeBox);
             this.Controls.Add(this.MoscowTimeBox);
             this.Controls.Add(this.LondonTimeBox);
             this.Controls.Add(this.VladivostokLabel);
             this.Controls.Add(this.MoscowLabel);
             this.Controls.Add(this.LondonLabel);
+            this.KeyPreview = true;
             this.Name = "MainForm";
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -91,6 +115,9 @@
         private System.Windows.Forms.TextBox LondonTimeBox;
         private System.Windows.Forms.TextBox MoscowTimeBox;
         private System.Windows.Forms.TextBox VladivostokTimeBox;
+        private System.Windows.Forms.Label StartClockLabel;
+        private System.Windows.Forms.Label StopClockLabel;
+        private System.Windows.Forms.Button LocaleButton;
     }
 }
 
