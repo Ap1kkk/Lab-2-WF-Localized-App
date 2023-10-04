@@ -35,9 +35,12 @@
             this.LondonTimeBox = new System.Windows.Forms.TextBox();
             this.MoscowTimeBox = new System.Windows.Forms.TextBox();
             this.VladivostokTimeBox = new System.Windows.Forms.TextBox();
-            this.StartClockLabel = new System.Windows.Forms.Label();
-            this.StopClockLabel = new System.Windows.Forms.Label();
             this.LocaleButton = new System.Windows.Forms.Button();
+            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.Menu = new System.Windows.Forms.ToolStripMenuItem();
+            this.MenuStartClock = new System.Windows.Forms.ToolStripMenuItem();
+            this.MenuStopClock = new System.Windows.Forms.ToolStripMenuItem();
+            this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // VladivostokLabel
@@ -70,16 +73,6 @@
             resources.ApplyResources(this.VladivostokTimeBox, "VladivostokTimeBox");
             this.VladivostokTimeBox.Name = "VladivostokTimeBox";
             // 
-            // StartClockLabel
-            // 
-            resources.ApplyResources(this.StartClockLabel, "StartClockLabel");
-            this.StartClockLabel.Name = "StartClockLabel";
-            // 
-            // StopClockLabel
-            // 
-            resources.ApplyResources(this.StopClockLabel, "StopClockLabel");
-            this.StopClockLabel.Name = "StopClockLabel";
-            // 
             // LocaleButton
             // 
             resources.ApplyResources(this.LocaleButton, "LocaleButton");
@@ -87,21 +80,51 @@
             this.LocaleButton.UseVisualStyleBackColor = true;
             this.LocaleButton.Click += new System.EventHandler(this.SwitchLocale);
             // 
+            // menuStrip1
+            // 
+            this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.Menu});
+            resources.ApplyResources(this.menuStrip1, "menuStrip1");
+            this.menuStrip1.Name = "menuStrip1";
+            // 
+            // Menu
+            // 
+            this.Menu.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.MenuStartClock,
+            this.MenuStopClock});
+            resources.ApplyResources(this.Menu, "Menu");
+            this.Menu.Name = "Menu";
+            // 
+            // MenuStartClock
+            // 
+            this.MenuStartClock.Name = "MenuStartClock";
+            resources.ApplyResources(this.MenuStartClock, "MenuStartClock");
+            this.MenuStartClock.Click += new System.EventHandler(this.MenuStartClock_Click);
+            // 
+            // MenuStopClock
+            // 
+            this.MenuStopClock.Name = "MenuStopClock";
+            resources.ApplyResources(this.MenuStopClock, "MenuStopClock");
+            this.MenuStopClock.Click += new System.EventHandler(this.MenuStopClock_Click);
+            // 
             // MainForm
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.LocaleButton);
-            this.Controls.Add(this.StopClockLabel);
-            this.Controls.Add(this.StartClockLabel);
             this.Controls.Add(this.VladivostokTimeBox);
             this.Controls.Add(this.MoscowTimeBox);
             this.Controls.Add(this.LondonTimeBox);
             this.Controls.Add(this.VladivostokLabel);
             this.Controls.Add(this.MoscowLabel);
             this.Controls.Add(this.LondonLabel);
+            this.Controls.Add(this.menuStrip1);
             this.KeyPreview = true;
+            this.MainMenuStrip = this.menuStrip1;
             this.Name = "MainForm";
+            this.menuStrip1.ResumeLayout(false);
+            this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -115,9 +138,11 @@
         private System.Windows.Forms.TextBox LondonTimeBox;
         private System.Windows.Forms.TextBox MoscowTimeBox;
         private System.Windows.Forms.TextBox VladivostokTimeBox;
-        private System.Windows.Forms.Label StartClockLabel;
-        private System.Windows.Forms.Label StopClockLabel;
         private System.Windows.Forms.Button LocaleButton;
+        private System.Windows.Forms.MenuStrip menuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem Menu;
+        private System.Windows.Forms.ToolStripMenuItem MenuStartClock;
+        private System.Windows.Forms.ToolStripMenuItem MenuStopClock;
     }
 }
 

@@ -67,15 +67,19 @@ namespace Lab_2_WF_Localized_App
         protected override void OnKeyDown(KeyEventArgs e)
         {
             base.OnKeyDown(e);
-
-            if(e.KeyCode == Keys.S&&e.Alt)
-            {
-                _clock.Start();
-            }
-            if(e.KeyCode == Keys.C&&e.Alt)
-            {
-                _clock.Stop();
-            }
+            //if(e.KeyCode == Keys.M&&e.Alt)
+            //{
+            //    Menu.Select();
+            //    Menu.ShowDropDown();
+            //}
+            //if(e.KeyCode == Keys.S&&e.Alt)
+            //{
+            //    StartClock();
+            //}
+            //if(e.KeyCode == Keys.C&&e.Alt)
+            //{
+            //    StopClock();
+            //}
         }
 
         private void SwitchLocale(object sender, EventArgs e)
@@ -98,6 +102,31 @@ namespace Lab_2_WF_Localized_App
             InitializeComponent();
             LocaleButton.Text = locale;
             InitializeForm();
+        }
+
+        private void StartClock()
+        {
+            _clock.Start();
+        }
+
+        private void StopClock()
+        {
+            _clock.Stop();
+        }
+
+        private void MenuStartClock_Click(object sender, EventArgs e)
+        {
+            StartClock();
+        }
+
+        private void MenuStopClock_Click(object sender, EventArgs e)
+        {
+            StopClock();
+        }
+
+        private void MainForm_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            e.Cancel = true;
         }
     }
 }

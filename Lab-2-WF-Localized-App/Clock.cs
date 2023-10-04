@@ -12,7 +12,7 @@ namespace Lab_2_WF_Localized_App
         public string DefaultValue { get; private set; } = "00 : 00 : 00";
 
         private System.Windows.Forms.Timer _timer = new System.Windows.Forms.Timer();
-        private DateTime _dateTime = DateTime.Now;
+        private DateTime _dateTime = DateTime.UtcNow;
 
         private Dictionary<string, TimeSpan> _citiesTimeShift = new Dictionary<string, TimeSpan>();
 

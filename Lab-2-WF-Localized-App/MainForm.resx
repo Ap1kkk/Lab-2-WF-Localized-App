@@ -154,7 +154,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;VladivostokLabel.ZOrder" xml:space="preserve">
-    <value>6</value>
+    <value>4</value>
   </data>
   <data name="MoscowLabel.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>None</value>
@@ -190,7 +190,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;MoscowLabel.ZOrder" xml:space="preserve">
-    <value>7</value>
+    <value>5</value>
   </data>
   <data name="LondonLabel.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>None</value>
@@ -226,7 +226,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;LondonLabel.ZOrder" xml:space="preserve">
-    <value>8</value>
+    <value>6</value>
   </data>
   <data name="LondonTimeBox.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 15pt</value>
@@ -235,7 +235,7 @@
     <value>158, 131</value>
   </data>
   <data name="LondonTimeBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>178, 30</value>
+    <value>178, 36</value>
   </data>
   <data name="LondonTimeBox.TabIndex" type="System.Int32, mscorlib">
     <value>5</value>
@@ -256,7 +256,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;LondonTimeBox.ZOrder" xml:space="preserve">
-    <value>5</value>
+    <value>3</value>
   </data>
   <data name="MoscowTimeBox.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 15pt</value>
@@ -265,7 +265,7 @@
     <value>158, 242</value>
   </data>
   <data name="MoscowTimeBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>178, 30</value>
+    <value>178, 36</value>
   </data>
   <data name="MoscowTimeBox.TabIndex" type="System.Int32, mscorlib">
     <value>4</value>
@@ -286,7 +286,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;MoscowTimeBox.ZOrder" xml:space="preserve">
-    <value>4</value>
+    <value>2</value>
   </data>
   <data name="VladivostokTimeBox.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 15pt</value>
@@ -295,7 +295,7 @@
     <value>158, 357</value>
   </data>
   <data name="VladivostokTimeBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>178, 30</value>
+    <value>178, 36</value>
   </data>
   <data name="VladivostokTimeBox.TabIndex" type="System.Int32, mscorlib">
     <value>3</value>
@@ -316,72 +316,6 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;VladivostokTimeBox.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="StartClockLabel.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="StartClockLabel.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 15pt</value>
-  </data>
-  <data name="StartClockLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>12, 497</value>
-  </data>
-  <data name="StartClockLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>123, 25</value>
-  </data>
-  <data name="StartClockLabel.TabIndex" type="System.Int32, mscorlib">
-    <value>2</value>
-  </data>
-  <data name="StartClockLabel.Text" xml:space="preserve">
-    <value>Start: Alt + S</value>
-  </data>
-  <data name="&gt;&gt;StartClockLabel.Name" xml:space="preserve">
-    <value>StartClockLabel</value>
-  </data>
-  <data name="&gt;&gt;StartClockLabel.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;StartClockLabel.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;StartClockLabel.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="StopClockLabel.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>None</value>
-  </data>
-  <data name="StopClockLabel.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="StopClockLabel.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 15pt</value>
-  </data>
-  <data name="StopClockLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>348, 497</value>
-  </data>
-  <data name="StopClockLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>124, 25</value>
-  </data>
-  <data name="StopClockLabel.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
-  </data>
-  <data name="StopClockLabel.Text" xml:space="preserve">
-    <value>Stop: Alt + C</value>
-  </data>
-  <data name="StopClockLabel.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>MiddleCenter</value>
-  </data>
-  <data name="&gt;&gt;StopClockLabel.Name" xml:space="preserve">
-    <value>StopClockLabel</value>
-  </data>
-  <data name="&gt;&gt;StopClockLabel.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;StopClockLabel.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;StopClockLabel.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
   <data name="LocaleButton.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
@@ -414,6 +348,63 @@
   <data name="&gt;&gt;LocaleButton.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
+  <metadata name="menuStrip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
+  <data name="MenuStartClock.ShortcutKeys" type="System.Windows.Forms.Keys, System.Windows.Forms">
+    <value>Alt+S</value>
+  </data>
+  <data name="MenuStartClock.Size" type="System.Drawing.Size, System.Drawing">
+    <value>260, 32</value>
+  </data>
+  <data name="MenuStartClock.Text" xml:space="preserve">
+    <value>Start CLock</value>
+  </data>
+  <data name="MenuStopClock.ShortcutKeys" type="System.Windows.Forms.Keys, System.Windows.Forms">
+    <value>Alt+C</value>
+  </data>
+  <data name="MenuStopClock.Size" type="System.Drawing.Size, System.Drawing">
+    <value>260, 32</value>
+  </data>
+  <data name="MenuStopClock.Text" xml:space="preserve">
+    <value>Clock  Stop</value>
+  </data>
+  <data name="Menu.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 12pt</value>
+  </data>
+  <data name="Menu.ShortcutKeys" type="System.Windows.Forms.Keys, System.Windows.Forms">
+    <value>Alt+M</value>
+  </data>
+  <data name="Menu.Size" type="System.Drawing.Size, System.Drawing">
+    <value>76, 32</value>
+  </data>
+  <data name="Menu.Text" xml:space="preserve">
+    <value>&amp;Menu</value>
+  </data>
+  <data name="menuStrip1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="menuStrip1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>484, 36</value>
+  </data>
+  <data name="menuStrip1.TabIndex" type="System.Int32, mscorlib">
+    <value>9</value>
+  </data>
+  <data name="menuStrip1.Text" xml:space="preserve">
+    <value>menuStrip1</value>
+  </data>
+  <data name="&gt;&gt;menuStrip1.Name" xml:space="preserve">
+    <value>menuStrip1</value>
+  </data>
+  <data name="&gt;&gt;menuStrip1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.MenuStrip, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;menuStrip1.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;menuStrip1.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
@@ -428,6 +419,24 @@
   </data>
   <data name="$this.MinimumSize" type="System.Drawing.Size, System.Drawing">
     <value>500, 570</value>
+  </data>
+  <data name="&gt;&gt;Menu.Name" xml:space="preserve">
+    <value>Menu</value>
+  </data>
+  <data name="&gt;&gt;Menu.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;MenuStartClock.Name" xml:space="preserve">
+    <value>MenuStartClock</value>
+  </data>
+  <data name="&gt;&gt;MenuStartClock.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;MenuStopClock.Name" xml:space="preserve">
+    <value>MenuStopClock</value>
+  </data>
+  <data name="&gt;&gt;MenuStopClock.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">
     <value>MainForm</value>
