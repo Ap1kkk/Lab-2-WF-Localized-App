@@ -154,7 +154,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;VladivostokLabel.ZOrder" xml:space="preserve">
-    <value>4</value>
+    <value>8</value>
   </data>
   <data name="MoscowLabel.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>None</value>
@@ -190,7 +190,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;MoscowLabel.ZOrder" xml:space="preserve">
-    <value>5</value>
+    <value>9</value>
   </data>
   <data name="LondonLabel.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>None</value>
@@ -226,7 +226,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;LondonLabel.ZOrder" xml:space="preserve">
-    <value>6</value>
+    <value>10</value>
   </data>
   <data name="LondonTimeBox.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 15pt</value>
@@ -256,7 +256,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;LondonTimeBox.ZOrder" xml:space="preserve">
-    <value>3</value>
+    <value>7</value>
   </data>
   <data name="MoscowTimeBox.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 15pt</value>
@@ -286,7 +286,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;MoscowTimeBox.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>6</value>
   </data>
   <data name="VladivostokTimeBox.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 15pt</value>
@@ -316,7 +316,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;VladivostokTimeBox.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>5</value>
   </data>
   <data name="LocaleButton.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>None</value>
@@ -346,41 +346,11 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;LocaleButton.ZOrder" xml:space="preserve">
-    <value>0</value>
+    <value>4</value>
   </data>
   <metadata name="menuStrip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
   </metadata>
-  <data name="MenuStartClock.ShortcutKeys" type="System.Windows.Forms.Keys, System.Windows.Forms">
-    <value>Alt+S</value>
-  </data>
-  <data name="MenuStartClock.Size" type="System.Drawing.Size, System.Drawing">
-    <value>260, 32</value>
-  </data>
-  <data name="MenuStartClock.Text" xml:space="preserve">
-    <value>Start CLock</value>
-  </data>
-  <data name="MenuStopClock.ShortcutKeys" type="System.Windows.Forms.Keys, System.Windows.Forms">
-    <value>Alt+C</value>
-  </data>
-  <data name="MenuStopClock.Size" type="System.Drawing.Size, System.Drawing">
-    <value>260, 32</value>
-  </data>
-  <data name="MenuStopClock.Text" xml:space="preserve">
-    <value>Clock  Stop</value>
-  </data>
-  <data name="Menu.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Segoe UI, 12pt</value>
-  </data>
-  <data name="Menu.ShortcutKeys" type="System.Windows.Forms.Keys, System.Windows.Forms">
-    <value>Alt+M</value>
-  </data>
-  <data name="Menu.Size" type="System.Drawing.Size, System.Drawing">
-    <value>76, 32</value>
-  </data>
-  <data name="Menu.Text" xml:space="preserve">
-    <value>&amp;Menu</value>
-  </data>
   <data name="menuStrip1.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 0</value>
   </data>
@@ -403,7 +373,175 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;menuStrip1.ZOrder" xml:space="preserve">
-    <value>7</value>
+    <value>11</value>
+  </data>
+  <data name="Menu.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 12pt</value>
+  </data>
+  <data name="Menu.ShortcutKeys" type="System.Windows.Forms.Keys, System.Windows.Forms">
+    <value>Alt+M</value>
+  </data>
+  <data name="Menu.Size" type="System.Drawing.Size, System.Drawing">
+    <value>76, 32</value>
+  </data>
+  <data name="Menu.Text" xml:space="preserve">
+    <value>&amp;Menu</value>
+  </data>
+  <data name="MenuStartClock.ShortcutKeys" type="System.Windows.Forms.Keys, System.Windows.Forms">
+    <value>Alt+S</value>
+  </data>
+  <data name="MenuStartClock.Size" type="System.Drawing.Size, System.Drawing">
+    <value>260, 32</value>
+  </data>
+  <data name="MenuStartClock.Text" xml:space="preserve">
+    <value>&amp;Start CLock</value>
+  </data>
+  <data name="MenuStopClock.ShortcutKeys" type="System.Windows.Forms.Keys, System.Windows.Forms">
+    <value>Alt+C</value>
+  </data>
+  <data name="MenuStopClock.Size" type="System.Drawing.Size, System.Drawing">
+    <value>260, 32</value>
+  </data>
+  <data name="MenuStopClock.Text" xml:space="preserve">
+    <value>&amp;Clock  Stop</value>
+  </data>
+  <data name="NovosibirskTimeBox.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 15pt</value>
+  </data>
+  <data name="NovosibirskTimeBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>158, 451</value>
+  </data>
+  <data name="NovosibirskTimeBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>178, 36</value>
+  </data>
+  <data name="NovosibirskTimeBox.TabIndex" type="System.Int32, mscorlib">
+    <value>10</value>
+  </data>
+  <data name="NovosibirskTimeBox.Text" xml:space="preserve">
+    <value>00 : 00 : 00</value>
+  </data>
+  <data name="NovosibirskTimeBox.TextAlign" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
+    <value>Center</value>
+  </data>
+  <data name="&gt;&gt;NovosibirskTimeBox.Name" xml:space="preserve">
+    <value>NovosibirskTimeBox</value>
+  </data>
+  <data name="&gt;&gt;NovosibirskTimeBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;NovosibirskTimeBox.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;NovosibirskTimeBox.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="NovosibirskLabel.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>None</value>
+  </data>
+  <data name="NovosibirskLabel.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 18pt</value>
+  </data>
+  <data name="NovosibirskLabel.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="NovosibirskLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>158, 414</value>
+  </data>
+  <data name="NovosibirskLabel.MinimumSize" type="System.Drawing.Size, System.Drawing">
+    <value>178, 34</value>
+  </data>
+  <data name="NovosibirskLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>178, 34</value>
+  </data>
+  <data name="NovosibirskLabel.TabIndex" type="System.Int32, mscorlib">
+    <value>11</value>
+  </data>
+  <data name="NovosibirskLabel.Text" xml:space="preserve">
+    <value>Novosibirsk</value>
+  </data>
+  <data name="NovosibirskLabel.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="&gt;&gt;NovosibirskLabel.Name" xml:space="preserve">
+    <value>NovosibirskLabel</value>
+  </data>
+  <data name="&gt;&gt;NovosibirskLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;NovosibirskLabel.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;NovosibirskLabel.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="NewYorkTimeBox.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 15pt</value>
+  </data>
+  <data name="NewYorkTimeBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>158, 54</value>
+  </data>
+  <data name="NewYorkTimeBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>178, 36</value>
+  </data>
+  <data name="NewYorkTimeBox.TabIndex" type="System.Int32, mscorlib">
+    <value>12</value>
+  </data>
+  <data name="NewYorkTimeBox.Text" xml:space="preserve">
+    <value>00 : 00 : 00</value>
+  </data>
+  <data name="NewYorkTimeBox.TextAlign" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
+    <value>Center</value>
+  </data>
+  <data name="&gt;&gt;NewYorkTimeBox.Name" xml:space="preserve">
+    <value>NewYorkTimeBox</value>
+  </data>
+  <data name="&gt;&gt;NewYorkTimeBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;NewYorkTimeBox.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;NewYorkTimeBox.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="NewYorkLabel.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>None</value>
+  </data>
+  <data name="NewYorkLabel.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 18pt</value>
+  </data>
+  <data name="NewYorkLabel.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="NewYorkLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>158, 17</value>
+  </data>
+  <data name="NewYorkLabel.MinimumSize" type="System.Drawing.Size, System.Drawing">
+    <value>178, 34</value>
+  </data>
+  <data name="NewYorkLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>178, 34</value>
+  </data>
+  <data name="NewYorkLabel.TabIndex" type="System.Int32, mscorlib">
+    <value>13</value>
+  </data>
+  <data name="NewYorkLabel.Text" xml:space="preserve">
+    <value>New York</value>
+  </data>
+  <data name="NewYorkLabel.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="&gt;&gt;NewYorkLabel.Name" xml:space="preserve">
+    <value>NewYorkLabel</value>
+  </data>
+  <data name="&gt;&gt;NewYorkLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;NewYorkLabel.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;NewYorkLabel.ZOrder" xml:space="preserve">
+    <value>1</value>
   </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>

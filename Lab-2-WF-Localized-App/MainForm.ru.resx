@@ -130,22 +130,22 @@
     <value>Ru-ru</value>
   </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="MenuStartClock.Size" type="System.Drawing.Size, System.Drawing">
+    <value>317, 32</value>
+  </data>
+  <data name="MenuStartClock.Text" xml:space="preserve">
+    <value>&amp;Запустить Часы</value>
+  </data>
+  <data name="MenuStopClock.Size" type="System.Drawing.Size, System.Drawing">
+    <value>317, 32</value>
+  </data>
+  <data name="MenuStopClock.Text" xml:space="preserve">
+    <value>&amp;Остановить часы</value>
+  </data>
   <data name="Menu.Size" type="System.Drawing.Size, System.Drawing">
     <value>82, 32</value>
   </data>
   <data name="Menu.Text" xml:space="preserve">
     <value>&amp;Меню</value>
-  </data>
-  <data name="MenuStartClock.Size" type="System.Drawing.Size, System.Drawing">
-    <value>395, 32</value>
-  </data>
-  <data name="MenuStartClock.Text" xml:space="preserve">
-    <value>Запустить Часы</value>
-  </data>
-  <data name="MenuStopClock.Size" type="System.Drawing.Size, System.Drawing">
-    <value>395, 32</value>
-  </data>
-  <data name="MenuStopClock.Text" xml:space="preserve">
-    <value>Остановить часы</value>
   </data>
 </root>

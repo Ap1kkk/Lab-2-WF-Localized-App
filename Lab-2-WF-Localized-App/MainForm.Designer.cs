@@ -40,6 +40,10 @@
             this.Menu = new System.Windows.Forms.ToolStripMenuItem();
             this.MenuStartClock = new System.Windows.Forms.ToolStripMenuItem();
             this.MenuStopClock = new System.Windows.Forms.ToolStripMenuItem();
+            this.NovosibirskTimeBox = new System.Windows.Forms.TextBox();
+            this.NovosibirskLabel = new System.Windows.Forms.Label();
+            this.NewYorkTimeBox = new System.Windows.Forms.TextBox();
+            this.NewYorkLabel = new System.Windows.Forms.Label();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -82,6 +86,7 @@
             // 
             // menuStrip1
             // 
+            this.menuStrip1.BackColor = System.Drawing.SystemColors.InactiveBorder;
             this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.Menu});
@@ -108,10 +113,34 @@
             resources.ApplyResources(this.MenuStopClock, "MenuStopClock");
             this.MenuStopClock.Click += new System.EventHandler(this.MenuStopClock_Click);
             // 
+            // NovosibirskTimeBox
+            // 
+            resources.ApplyResources(this.NovosibirskTimeBox, "NovosibirskTimeBox");
+            this.NovosibirskTimeBox.Name = "NovosibirskTimeBox";
+            // 
+            // NovosibirskLabel
+            // 
+            resources.ApplyResources(this.NovosibirskLabel, "NovosibirskLabel");
+            this.NovosibirskLabel.Name = "NovosibirskLabel";
+            // 
+            // NewYorkTimeBox
+            // 
+            resources.ApplyResources(this.NewYorkTimeBox, "NewYorkTimeBox");
+            this.NewYorkTimeBox.Name = "NewYorkTimeBox";
+            // 
+            // NewYorkLabel
+            // 
+            resources.ApplyResources(this.NewYorkLabel, "NewYorkLabel");
+            this.NewYorkLabel.Name = "NewYorkLabel";
+            // 
             // MainForm
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.NewYorkTimeBox);
+            this.Controls.Add(this.NewYorkLabel);
+            this.Controls.Add(this.NovosibirskTimeBox);
+            this.Controls.Add(this.NovosibirskLabel);
             this.Controls.Add(this.LocaleButton);
             this.Controls.Add(this.VladivostokTimeBox);
             this.Controls.Add(this.MoscowTimeBox);
@@ -143,6 +172,10 @@
         private System.Windows.Forms.ToolStripMenuItem Menu;
         private System.Windows.Forms.ToolStripMenuItem MenuStartClock;
         private System.Windows.Forms.ToolStripMenuItem MenuStopClock;
+        private System.Windows.Forms.TextBox NovosibirskTimeBox;
+        private System.Windows.Forms.Label NovosibirskLabel;
+        private System.Windows.Forms.TextBox NewYorkTimeBox;
+        private System.Windows.Forms.Label NewYorkLabel;
     }
 }
 
