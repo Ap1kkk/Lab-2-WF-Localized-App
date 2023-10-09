@@ -29,53 +29,19 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
-            this.VladivostokLabel = new System.Windows.Forms.Label();
-            this.MoscowLabel = new System.Windows.Forms.Label();
-            this.LondonLabel = new System.Windows.Forms.Label();
-            this.LondonTimeBox = new System.Windows.Forms.TextBox();
-            this.MoscowTimeBox = new System.Windows.Forms.TextBox();
-            this.VladivostokTimeBox = new System.Windows.Forms.TextBox();
             this.LocaleButton = new System.Windows.Forms.Button();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.Menu = new System.Windows.Forms.ToolStripMenuItem();
             this.MenuStartClock = new System.Windows.Forms.ToolStripMenuItem();
             this.MenuStopClock = new System.Windows.Forms.ToolStripMenuItem();
-            this.NovosibirskTimeBox = new System.Windows.Forms.TextBox();
-            this.NovosibirskLabel = new System.Windows.Forms.Label();
-            this.NewYorkTimeBox = new System.Windows.Forms.TextBox();
-            this.NewYorkLabel = new System.Windows.Forms.Label();
+            this.MainLayoutPanel = new System.Windows.Forms.FlowLayoutPanel();
+            this.Panel = new System.Windows.Forms.Panel();
+            this.TextBox = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.menuStrip1.SuspendLayout();
+            this.MainLayoutPanel.SuspendLayout();
+            this.Panel.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // VladivostokLabel
-            // 
-            resources.ApplyResources(this.VladivostokLabel, "VladivostokLabel");
-            this.VladivostokLabel.Name = "VladivostokLabel";
-            // 
-            // MoscowLabel
-            // 
-            resources.ApplyResources(this.MoscowLabel, "MoscowLabel");
-            this.MoscowLabel.Name = "MoscowLabel";
-            // 
-            // LondonLabel
-            // 
-            resources.ApplyResources(this.LondonLabel, "LondonLabel");
-            this.LondonLabel.Name = "LondonLabel";
-            // 
-            // LondonTimeBox
-            // 
-            resources.ApplyResources(this.LondonTimeBox, "LondonTimeBox");
-            this.LondonTimeBox.Name = "LondonTimeBox";
-            // 
-            // MoscowTimeBox
-            // 
-            resources.ApplyResources(this.MoscowTimeBox, "MoscowTimeBox");
-            this.MoscowTimeBox.Name = "MoscowTimeBox";
-            // 
-            // VladivostokTimeBox
-            // 
-            resources.ApplyResources(this.VladivostokTimeBox, "VladivostokTimeBox");
-            this.VladivostokTimeBox.Name = "VladivostokTimeBox";
             // 
             // LocaleButton
             // 
@@ -113,69 +79,60 @@
             resources.ApplyResources(this.MenuStopClock, "MenuStopClock");
             this.MenuStopClock.Click += new System.EventHandler(this.MenuStopClock_Click);
             // 
-            // NovosibirskTimeBox
+            // MainLayoutPanel
             // 
-            resources.ApplyResources(this.NovosibirskTimeBox, "NovosibirskTimeBox");
-            this.NovosibirskTimeBox.Name = "NovosibirskTimeBox";
+            this.MainLayoutPanel.Controls.Add(this.Panel);
+            resources.ApplyResources(this.MainLayoutPanel, "MainLayoutPanel");
+            this.MainLayoutPanel.Name = "MainLayoutPanel";
             // 
-            // NovosibirskLabel
+            // Panel
             // 
-            resources.ApplyResources(this.NovosibirskLabel, "NovosibirskLabel");
-            this.NovosibirskLabel.Name = "NovosibirskLabel";
+            resources.ApplyResources(this.Panel, "Panel");
+            this.Panel.Controls.Add(this.TextBox);
+            this.Panel.Controls.Add(this.label1);
+            this.Panel.Name = "Panel";
             // 
-            // NewYorkTimeBox
+            // TextBox
             // 
-            resources.ApplyResources(this.NewYorkTimeBox, "NewYorkTimeBox");
-            this.NewYorkTimeBox.Name = "NewYorkTimeBox";
+            resources.ApplyResources(this.TextBox, "TextBox");
+            this.TextBox.Name = "TextBox";
             // 
-            // NewYorkLabel
+            // label1
             // 
-            resources.ApplyResources(this.NewYorkLabel, "NewYorkLabel");
-            this.NewYorkLabel.Name = "NewYorkLabel";
+            resources.ApplyResources(this.label1, "label1");
+            this.label1.Name = "label1";
             // 
             // MainForm
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.NewYorkTimeBox);
-            this.Controls.Add(this.NewYorkLabel);
-            this.Controls.Add(this.NovosibirskTimeBox);
-            this.Controls.Add(this.NovosibirskLabel);
+            this.Controls.Add(this.MainLayoutPanel);
             this.Controls.Add(this.LocaleButton);
-            this.Controls.Add(this.VladivostokTimeBox);
-            this.Controls.Add(this.MoscowTimeBox);
-            this.Controls.Add(this.LondonTimeBox);
-            this.Controls.Add(this.VladivostokLabel);
-            this.Controls.Add(this.MoscowLabel);
-            this.Controls.Add(this.LondonLabel);
             this.Controls.Add(this.menuStrip1);
             this.KeyPreview = true;
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "MainForm";
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
+            this.MainLayoutPanel.ResumeLayout(false);
+            this.MainLayoutPanel.PerformLayout();
+            this.Panel.ResumeLayout(false);
+            this.Panel.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Label VladivostokLabel;
-        private System.Windows.Forms.Label MoscowLabel;
-        private System.Windows.Forms.Label LondonLabel;
-        private System.Windows.Forms.TextBox LondonTimeBox;
-        private System.Windows.Forms.TextBox MoscowTimeBox;
-        private System.Windows.Forms.TextBox VladivostokTimeBox;
         private System.Windows.Forms.Button LocaleButton;
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem Menu;
         private System.Windows.Forms.ToolStripMenuItem MenuStartClock;
         private System.Windows.Forms.ToolStripMenuItem MenuStopClock;
-        private System.Windows.Forms.TextBox NovosibirskTimeBox;
-        private System.Windows.Forms.Label NovosibirskLabel;
-        private System.Windows.Forms.TextBox NewYorkTimeBox;
-        private System.Windows.Forms.Label NewYorkLabel;
+        private System.Windows.Forms.FlowLayoutPanel MainLayoutPanel;
+        private System.Windows.Forms.Panel Panel;
+        private System.Windows.Forms.TextBox TextBox;
+        private System.Windows.Forms.Label label1;
     }
 }
 

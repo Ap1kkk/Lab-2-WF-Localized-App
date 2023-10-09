@@ -7,130 +7,90 @@ using System.Windows.Forms;
 
 namespace Lab_2_WF_Localized_App
 {
+    public class CityTime
+    {
+        public TimeSpan TimeSpan;
+        public string TimeString;
+    }
+
     internal class Clock
     {
-        public event Action SecondTick;
-        public event Action<string> TimerEnded;
-        public string DefaultValue { get; private set; } = "00 : 00 : 00";
+        public static readonly string DefaultValue = "00 : 00 : 00";
 
-        private Dictionary<int, Timer> _timers = new Dictionary<int, Timer>();
-        private DateTime _dateTime = DateTime.UtcNow;
+        public event Action<Clock> SecondTick;
+        public event Action<Clock> TimerEnded;
+        public List<string> Cities => _cities.Keys.ToList();
 
-        private Dictionary<string, TimeSpan> _citiesTimeShift = new Dictionary<string, TimeSpan>();
-        private Dictionary<string, string> _citiesTimes = new Dictionary<string, string>();
-        private Dictionary<int, List<string>> _citiesIntervals = new Dictionary<int, List<string>>();
-        private Dictionary<int, int> _intervalsTicks = new Dictionary<int, int>();
+        private readonly Dictionary<string, CityTime> _cities = new Dictionary<string, CityTime>();
 
-        public Clock()
+        private Timer _timer;
+        private int _ticksAmount = 0;
+        private int _ticksMade = 0;
+
+        public Clock(int interval, int ticksAmount)
         {
+            _timer = new Timer();
+            _timer.Interval = interval;
+            _timer.Tick += UpdateCityTimes;
+            _ticksAmount = ticksAmount;
         }
         ~Clock()
         {
-            foreach (var timer in _timers.Values)
-            {
-                timer.Tick -= HandleTimerTick;
-            }
+            _timer.Tick -= UpdateCityTimes;
         }
 
         public void Start()
         {
-            foreach (var timer in _timers.Values)
-            {
-                timer.Start();
-            }
+            _timer.Start();
         }
 
         public void Stop()
         {
-            foreach (var timer in _timers.Values)
-            {
-                timer.Stop();
-            }
+            _timer.Stop();
         }
 
         public string GetCityTime(string city)
         {
             string formatedTime = DefaultValue;
-            if (!_citiesTimes.ContainsKey(city))
+            if (!_cities.ContainsKey(city))
             {
                 return formatedTime;
             }
-            return _citiesTimes[city];
+            return _cities[city].TimeString;
         }
 
-        public void AddCity(string city, TimeSpan timeShift, int interval)
+        public void AddCity(string city, TimeSpan timeShift)
         {
-            if(_citiesTimeShift.ContainsKey(city))
+            if (_cities.ContainsKey(city))
             {
                 string errorMessage = "Cannot add city. This city already added";
                 Console.WriteLine(errorMessage);
                 throw new ArgumentException(errorMessage, city);
             }
-
-            _citiesTimes.Add(city, DefaultValue);
-            _citiesTimeShift.Add(city, timeShift);
-            AddCityInterval(interval, city);
-            AddTimer(interval);
+            var cityTime = new CityTime { TimeSpan = timeShift };
+            _cities.Add(city, cityTime);
         }
 
-        private void HandleTimerTick(object sender, EventArgs e)
+        private void UpdateCityTimes(object sender, EventArgs e)
         {
-            Timer currentTimer = sender as Timer;
-            if (currentTimer != null)
-            {
-                UpdateCityTimes(currentTimer.Interval);
-            }
-        }
+            DateTime dateTime = DateTime.UtcNow;
 
-        private void UpdateCityTimes(int interval)
-        {
-            _dateTime = DateTime.UtcNow;
-
-            int ticksAmount = _intervalsTicks[interval];
-            bool isEnded = false;
-            _intervalsTicks[interval] = ++ticksAmount;
-            if(ticksAmount == 10)
+            foreach (var city in _cities.Values)
             {
-                isEnded= true;
+                DateTime cityTime = dateTime + city.TimeSpan;
+                city.TimeString = cityTime.ToString("HH : mm : ss");
+
             }
 
-            var cities = _citiesIntervals[interval];
-            foreach (var city in cities)
-            {
-                DateTime shiftedTime = _dateTime + _citiesTimeShift[city];
-                _citiesTimes[city] = shiftedTime.ToString("HH : mm : ss");
-                if(isEnded)
-                {
-                    TimerEnded?.Invoke(city);
-                }
-            }
-            
-            SecondTick?.Invoke();
-            
-        }
+            SecondTick?.Invoke(this);
 
-        private void AddTimer(int interval)
-        {
-            if(_timers.ContainsKey(interval))
+            ++_ticksMade;
+            if (_ticksAmount == _ticksMade)
             {
-                return;
-            }
-            Timer newtimer = new Timer { Interval = interval };
-            newtimer.Tick += HandleTimerTick;
-            _intervalsTicks.Add(interval, 0);
-            _timers.Add(interval, newtimer);
-        }
-
-        private void AddCityInterval(int interval, string city)
-        {
-            if(!_citiesIntervals.ContainsKey(interval))
-            {
-                _citiesIntervals.Add(interval, new List<string> { city });
-            }
-            else
-            {
-                _citiesIntervals[interval].Add(city);
+                Stop();
+                TimerEnded?.Invoke(this);
             }
         }
     }
+
 }
