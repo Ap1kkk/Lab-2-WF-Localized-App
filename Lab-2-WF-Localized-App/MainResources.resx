@@ -117,32 +117,13 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="LocaleButton.Text" xml:space="preserve">
-    <value>Ru-ru</value>
+  <data name="EndedWork" xml:space="preserve">
+    <value>has ended its work.</value>
   </data>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="MenuStartClock.Size" type="System.Drawing.Size, System.Drawing">
-    <value>259, 26</value>
+  <data name="InvalidCityInput" xml:space="preserve">
+    <value>City cannot be empty string</value>
   </data>
-  <data name="MenuStartClock.Text" xml:space="preserve">
-    <value>&amp;Запустить Часы</value>
-  </data>
-  <data name="MenuStopClock.Size" type="System.Drawing.Size, System.Drawing">
-    <value>259, 26</value>
-  </data>
-  <data name="MenuStopClock.Text" xml:space="preserve">
-    <value>&amp;Остановить часы</value>
-  </data>
-  <data name="addCityToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>259, 26</value>
-  </data>
-  <data name="addCityToolStripMenuItem.Text" xml:space="preserve">
-    <value>&amp;Добавить город</value>
-  </data>
-  <data name="Menu.Size" type="System.Drawing.Size, System.Drawing">
-    <value>66, 25</value>
-  </data>
-  <data name="Menu.Text" xml:space="preserve">
-    <value>&amp;Меню</value>
+  <data name="InvalidInputCaption" xml:space="preserve">
+    <value>Ivalid data!</value>
   </data>
 </root>

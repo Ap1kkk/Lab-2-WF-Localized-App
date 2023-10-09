@@ -42,6 +42,8 @@ namespace Lab_2_WF_Localized_App
         private int _fontSize = 14;
         private string _fontName = "Microsoft Sans Serif";
 
+        private AddCityForm _addCityForm = null;
+
         public MainForm()
         {
             System.Threading.Thread.CurrentThread.CurrentUICulture = new System.Globalization.CultureInfo(_initLocale);
@@ -50,10 +52,11 @@ namespace Lab_2_WF_Localized_App
 
             LocaleButton.Text = _initLocale;
 
-            InitializeForm();
+            FormInit();
 
-            AddCity(_moscow, new TimeSpan(3, 0, 0), 1000, 10);
-            //CreateTimeView(_moscow);
+            AddDefaultCities();
+
+            
         }
 
         ~MainForm()
@@ -65,13 +68,26 @@ namespace Lab_2_WF_Localized_App
             }
         }
 
-        private void InitializeForm()
+        private void FormInit()
         {
-            //LondonTimeBox.Text = _clock.GetCityTime(_london);
-            //MoscowTimeBox.Text = _clock.GetCityTime(_moscow);
-            //VladivostokTimeBox.Text = _clock.GetCityTime(_vladivostok);
-            //NovosibirskTimeBox.Text = _clock.GetCityTime(_novosibirk);
-            //NewYorkTimeBox.Text = _clock.GetCityTime(_newYork);
+            foreach (var view in _cityViews.Values)
+            {
+                MainLayoutPanel.Controls.Add(view.Panel);
+            }
+        }
+
+        public void AddDefaultCities()
+        {
+            AddCity(_london, new TimeSpan(0, 0, 0), 1000, 10);
+            AddCity(_moscow, new TimeSpan(3, 0, 0), 1000, 10);
+            AddCity(_novosibirk, new TimeSpan(8, 0, 0), 2000, 10);
+            AddCity(_vladivostok, new TimeSpan(9, 0, 0), 5000, 10);
+            AddCity(_newYork, new TimeSpan(-3, 0, 0), 10000, 10);
+        }
+
+        public void HandleInput(string city, int hoursShift, int interval, int ticksToEnd)
+        {
+            AddCity(city, new TimeSpan(hoursShift, 0, 0), interval, ticksToEnd);
         }
 
         private void AddCity(string city, TimeSpan timeSpan, int interval, int ticksToEnd)
@@ -85,9 +101,12 @@ namespace Lab_2_WF_Localized_App
             TimeView timeView = CreateTimeView(city);
             _cityViews.Add(city, timeView);
 
-            Clock clock = AddClock(new ClockData(interval, ticksToEnd));
-            clock.SecondTick += HandleSecondTick;
-            clock.TimerEnded += OnTimerEnded;
+            Clock clock = AddClock(new ClockData(interval, ticksToEnd), out bool isClockExists);
+            if (!isClockExists)
+            {
+                clock.SecondTick += HandleSecondTick;
+                clock.TimerEnded += OnTimerEnded;
+            }
             clock.AddCity(city, timeSpan);
         }
 
@@ -121,15 +140,19 @@ namespace Lab_2_WF_Localized_App
 
             MainLayoutPanel.Controls.Add(panel);
 
-            TimeView timeView = new TimeView(city, label, timeBox);
+            TimeView timeView = new TimeView(city, label, timeBox, panel);
 
             return timeView;
         }
 
-        private Clock AddClock(ClockData clockData)
+        private Clock AddClock(ClockData clockData, out bool exists)
         {
-            if(_clocks.ContainsKey(clockData))
+            exists = false;
+            if (_clocks.ContainsKey(clockData))
+            {
+                exists = true;
                 return _clocks[clockData];
+            }
 
             Clock clock = new Clock(clockData.Interval, clockData.TicksToEnd);
             _clocks.Add(clockData, clock);
@@ -147,7 +170,7 @@ namespace Lab_2_WF_Localized_App
         {
             foreach (var city in clock.Cities)
             {
-                MessageBox.Show($"{city} has ended its work");
+                MessageBox.Show($"{city} {MainResources.EndedWork}");
             }
         }
 
@@ -169,8 +192,8 @@ namespace Lab_2_WF_Localized_App
 
             Controls.Clear();
             InitializeComponent();
+            FormInit();
             LocaleButton.Text = locale;
-            InitializeForm();
         }
 
         private void StartClock()
@@ -201,17 +224,24 @@ namespace Lab_2_WF_Localized_App
             StopClock();
         }
 
+        private void addCityToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            _addCityForm = new AddCityForm(this);
+            _addCityForm.ShowDialog();
+        }
     }
 
     class TimeView
     {
         public readonly Label Label;
         public readonly TextBox TextBox;
+        public readonly Panel Panel;
 
-        public TimeView(string city, Label label, TextBox textBox)
+        public TimeView(string city, Label label, TextBox textBox, Panel panel)
         {
             Label = label;
             TextBox = textBox;
+            Panel = panel;
             Label.Text = city;
             TextBox.Text = Clock.DefaultValue;
         }

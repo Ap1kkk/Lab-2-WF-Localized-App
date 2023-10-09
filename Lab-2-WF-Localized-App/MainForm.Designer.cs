@@ -34,13 +34,9 @@
             this.Menu = new System.Windows.Forms.ToolStripMenuItem();
             this.MenuStartClock = new System.Windows.Forms.ToolStripMenuItem();
             this.MenuStopClock = new System.Windows.Forms.ToolStripMenuItem();
+            this.addCityToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.MainLayoutPanel = new System.Windows.Forms.FlowLayoutPanel();
-            this.Panel = new System.Windows.Forms.Panel();
-            this.TextBox = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
             this.menuStrip1.SuspendLayout();
-            this.MainLayoutPanel.SuspendLayout();
-            this.Panel.SuspendLayout();
             this.SuspendLayout();
             // 
             // LocaleButton
@@ -52,55 +48,44 @@
             // 
             // menuStrip1
             // 
+            resources.ApplyResources(this.menuStrip1, "menuStrip1");
             this.menuStrip1.BackColor = System.Drawing.SystemColors.InactiveBorder;
             this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.Menu});
-            resources.ApplyResources(this.menuStrip1, "menuStrip1");
             this.menuStrip1.Name = "menuStrip1";
             // 
             // Menu
             // 
+            resources.ApplyResources(this.Menu, "Menu");
             this.Menu.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.MenuStartClock,
-            this.MenuStopClock});
-            resources.ApplyResources(this.Menu, "Menu");
+            this.MenuStopClock,
+            this.addCityToolStripMenuItem});
             this.Menu.Name = "Menu";
             // 
             // MenuStartClock
             // 
-            this.MenuStartClock.Name = "MenuStartClock";
             resources.ApplyResources(this.MenuStartClock, "MenuStartClock");
+            this.MenuStartClock.Name = "MenuStartClock";
             this.MenuStartClock.Click += new System.EventHandler(this.MenuStartClock_Click);
             // 
             // MenuStopClock
             // 
-            this.MenuStopClock.Name = "MenuStopClock";
             resources.ApplyResources(this.MenuStopClock, "MenuStopClock");
+            this.MenuStopClock.Name = "MenuStopClock";
             this.MenuStopClock.Click += new System.EventHandler(this.MenuStopClock_Click);
+            // 
+            // addCityToolStripMenuItem
+            // 
+            resources.ApplyResources(this.addCityToolStripMenuItem, "addCityToolStripMenuItem");
+            this.addCityToolStripMenuItem.Name = "addCityToolStripMenuItem";
+            this.addCityToolStripMenuItem.Click += new System.EventHandler(this.addCityToolStripMenuItem_Click);
             // 
             // MainLayoutPanel
             // 
-            this.MainLayoutPanel.Controls.Add(this.Panel);
             resources.ApplyResources(this.MainLayoutPanel, "MainLayoutPanel");
             this.MainLayoutPanel.Name = "MainLayoutPanel";
-            // 
-            // Panel
-            // 
-            resources.ApplyResources(this.Panel, "Panel");
-            this.Panel.Controls.Add(this.TextBox);
-            this.Panel.Controls.Add(this.label1);
-            this.Panel.Name = "Panel";
-            // 
-            // TextBox
-            // 
-            resources.ApplyResources(this.TextBox, "TextBox");
-            this.TextBox.Name = "TextBox";
-            // 
-            // label1
-            // 
-            resources.ApplyResources(this.label1, "label1");
-            this.label1.Name = "label1";
             // 
             // MainForm
             // 
@@ -114,10 +99,6 @@
             this.Name = "MainForm";
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
-            this.MainLayoutPanel.ResumeLayout(false);
-            this.MainLayoutPanel.PerformLayout();
-            this.Panel.ResumeLayout(false);
-            this.Panel.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -130,9 +111,7 @@
         private System.Windows.Forms.ToolStripMenuItem MenuStartClock;
         private System.Windows.Forms.ToolStripMenuItem MenuStopClock;
         private System.Windows.Forms.FlowLayoutPanel MainLayoutPanel;
-        private System.Windows.Forms.Panel Panel;
-        private System.Windows.Forms.TextBox TextBox;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.ToolStripMenuItem addCityToolStripMenuItem;
     }
 }
 

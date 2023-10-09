@@ -117,32 +117,29 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="LocaleButton.Text" xml:space="preserve">
-    <value>Ru-ru</value>
+  <data name="label1.Text" xml:space="preserve">
+    <value>Введите название города</value>
+  </data>
+  <data name="label2.Text" xml:space="preserve">
+    <value>Введите часовой пояс</value>
   </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="MenuStartClock.Size" type="System.Drawing.Size, System.Drawing">
-    <value>259, 26</value>
+  <data name="label3.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 154</value>
   </data>
-  <data name="MenuStartClock.Text" xml:space="preserve">
-    <value>&amp;Запустить Часы</value>
+  <data name="label3.Size" type="System.Drawing.Size, System.Drawing">
+    <value>416, 55</value>
   </data>
-  <data name="MenuStopClock.Size" type="System.Drawing.Size, System.Drawing">
-    <value>259, 26</value>
+  <data name="label3.Text" xml:space="preserve">
+    <value>Введите интервал часов ( в миллисекундах)</value>
   </data>
-  <data name="MenuStopClock.Text" xml:space="preserve">
-    <value>&amp;Остановить часы</value>
+  <data name="label4.Text" xml:space="preserve">
+    <value>Введите максимальное число тиков</value>
   </data>
-  <data name="addCityToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>259, 26</value>
+  <data name="button1.Text" xml:space="preserve">
+    <value>Подтвердить</value>
   </data>
-  <data name="addCityToolStripMenuItem.Text" xml:space="preserve">
-    <value>&amp;Добавить город</value>
-  </data>
-  <data name="Menu.Size" type="System.Drawing.Size, System.Drawing">
-    <value>66, 25</value>
-  </data>
-  <data name="Menu.Text" xml:space="preserve">
-    <value>&amp;Меню</value>
+  <data name="$this.Text" xml:space="preserve">
+    <value>Добавить город</value>
   </data>
 </root>
