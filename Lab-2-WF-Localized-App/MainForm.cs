@@ -56,7 +56,7 @@ namespace Lab_2_WF_Localized_App
 
             AddDefaultCities();
 
-            
+
         }
 
         ~MainForm()

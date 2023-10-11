@@ -48,38 +48,38 @@
             // 
             // menuStrip1
             // 
-            resources.ApplyResources(this.menuStrip1, "menuStrip1");
             this.menuStrip1.BackColor = System.Drawing.SystemColors.InactiveBorder;
             this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.Menu});
+            resources.ApplyResources(this.menuStrip1, "menuStrip1");
             this.menuStrip1.Name = "menuStrip1";
             // 
             // Menu
             // 
-            resources.ApplyResources(this.Menu, "Menu");
             this.Menu.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.MenuStartClock,
             this.MenuStopClock,
             this.addCityToolStripMenuItem});
+            resources.ApplyResources(this.Menu, "Menu");
             this.Menu.Name = "Menu";
             // 
             // MenuStartClock
             // 
-            resources.ApplyResources(this.MenuStartClock, "MenuStartClock");
             this.MenuStartClock.Name = "MenuStartClock";
+            resources.ApplyResources(this.MenuStartClock, "MenuStartClock");
             this.MenuStartClock.Click += new System.EventHandler(this.MenuStartClock_Click);
             // 
             // MenuStopClock
             // 
-            resources.ApplyResources(this.MenuStopClock, "MenuStopClock");
             this.MenuStopClock.Name = "MenuStopClock";
+            resources.ApplyResources(this.MenuStopClock, "MenuStopClock");
             this.MenuStopClock.Click += new System.EventHandler(this.MenuStopClock_Click);
             // 
             // addCityToolStripMenuItem
             // 
-            resources.ApplyResources(this.addCityToolStripMenuItem, "addCityToolStripMenuItem");
             this.addCityToolStripMenuItem.Name = "addCityToolStripMenuItem";
+            resources.ApplyResources(this.addCityToolStripMenuItem, "addCityToolStripMenuItem");
             this.addCityToolStripMenuItem.Click += new System.EventHandler(this.addCityToolStripMenuItem_Click);
             // 
             // MainLayoutPanel
